@@ -1,0 +1,27 @@
+import sqlite3
+import os
+import numpy as np
+from typing import List, Dict, Union, Optional, Tuple
+import faiss
+from transformers import AutoTokenizer, AutoModel # 用于文本嵌入
+from PIL import Image
+import torch
+import zhipuai # 用于文本生成 LLM
+import json
+import time
+import random
+
+写一个requirement.txt
+requirements = [
+    "sqlite3",
+    "os",
+    "numpy",
+    "typing",
+    "transformers",
+    "PIL",
+    "torch",
+    "zhipuai",
+    "json",
+    "time",
+    "random"
+]
