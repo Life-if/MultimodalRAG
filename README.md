@@ -1,10 +1,10 @@
 # 初探多模态 RAG 系统
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/singularguy/MultimodalRAG?style=social)](https://github.com/singularguy/MultimodalRAG/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/Life-if/MultimodalRAG?style=social)](https://github.com/Life-if/MultimodalRAG/stargazers)
 [![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
-[![GitHub issues](https://img.shields.io/github/issues/singularguy/MultimodalRAG)](https://github.com/singularguy/MultimodalRAG/issues)
-[![GitHub forks](https://img.shields.io/github/forks/singularguy/MultimodalRAG)](https://github.com/singularguy/MultimodalRAG/network)
+[![GitHub issues](https://img.shields.io/github/issues/Life-if/MultimodalRAG)](https://github.com/Life-if/MultimodalRAG/issues)
+[![GitHub forks](https://img.shields.io/github/forks/Life-if/MultimodalRAG)](https://github.com/Life-if/MultimodalRAG/network)
 
 ---
 
@@ -15,12 +15,19 @@
 <!-- 可选：在这里添加一个简短的 Demo GIF 或截图 -->
 <!-- ![Project Demo GIF](link_to_your_demo.gif) -->
 
+## 💡 TODO
+
+*   [ ] **输入拓展**: 对于同时含有图文的文档，应当进行拆解和分析，因此应当调整输入数据的方式（起码不能是 json ）。这里拟采用 vlm 和 PDF 文档解析类工具进行处理。
+*   [ ] **模型本地化**: 除了采用 API 的方式，应当提供本地化部署的方案,这里拟采用 vllm 的方案进行拓展。
+*   [ ] **图结构支持**: 对标 GraphRAG 的解决方案进行模拟。（感觉搞不定啊，这一套要能整出来可以写篇2区了吧……）
+*   [ ] **对图像文本信息的细粒度构建**: 时间、地点、人物、事件四大元素的关联。
+*   [ ] **对视频，尤其是长视频的支持理解**
+
+## 📅 更新日志 (Update Log)
+*   ** 毕业ing，更新时间随缘**
+*   **2025.05.01**: 原始代码。
+  
 ---
-
-✨ **欢迎关注我的分享渠道** ✨
-
-*   小红书号: **AnthroSeekTheX** (Let's Seek The X!)
-*   [**详细技术方案设计与思考 (飞书文档)**](https://jjrh0ec8rc.feishu.cn/docx/V5BrdafX1ovqL2xbiNlcDdsHnUh)
 
 💡 **温馨提示 (Friendly Reminder)** 💡
 > 想要快速获取本项目代码的 AI 解析？试试将浏览器地址栏中的 `github.com` 替换为 `deepwiki.com` 访问！ (例如: `https://github.com/singularguy/MultimodalRAG` -> `https://deepwiki.com/singularguy/MultimodalRAG`) *此功能依赖 Deepwiki 服务*
@@ -161,12 +168,6 @@
 *   **可扩展性**: 生产环境可考虑替换 SQLite 为更专业的数据库或向量数据库。
 *   **提示工程**: 优化 `Generator` 中的 Prompt 可能提升效果。
 *   **文本分块**: 长文本在索引前进行分块处理。
-
-## 📅 更新日志 (Update Log)
-
-*   **2024.04.28**: 将文本/图像的clip以及储存方式和检索方式进行修改。
-*   **2024.04.27**: 新增多种技术方案的简单实现。
-*   **2024.04.25**: 原始代码。
 
 ## 🤝 如何贡献
 
