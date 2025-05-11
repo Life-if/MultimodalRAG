@@ -1,4 +1,4 @@
-# 初探多模态 RAG 系统
+# 初探多模态 RAG 系统 —— 基于 LangChain 的高效多模态大模型推理与增强框架
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/Life-if/MultimodalRAG?style=social)](https://github.com/Life-if/MultimodalRAG/stargazers)
@@ -10,7 +10,8 @@
 
 ## 项目简介
 
-本项目演示了一个结合 **CLIP**、**Faiss** 和 **智谱 AI**，能够处理文本和图像数据的检索增强生成 (Retrieval-Augmented Generation, RAG) 系统。
+本项目尝试性的设计了一个结合 **CLIP**、**Faiss** 和 **LangChain**，能够处理文本和图像数据的检索增强生成 (Retrieval-Augmented Generation, RAG) 系统。
+
 
 <!-- 可选：在这里添加一个简短的 Demo GIF 或截图 -->
 <!-- ![Project Demo GIF](link_to_your_demo.gif) -->
@@ -18,10 +19,10 @@
 ## 💡 TODO
 
 *   [ ] **输入拓展**: 对于同时含有图文的文档，应当进行拆解和分析，因此应当调整输入数据的方式（起码不能是 json ）。这里拟采用 vlm 和 PDF 文档解析类工具进行处理。
-*   [ ] **模型本地化**: 除了采用 API 的方式，应当提供本地化部署的方案,这里拟采用 vllm 的方案进行拓展。
-*   [ ] **图结构支持**: 对标 GraphRAG 的解决方案进行模拟。（感觉搞不定啊，这一套要能整出来可以写篇2区了吧……）
-*   [ ] **对图像文本信息的细粒度构建**: 时间、地点、人物、事件四大元素的关联。
-*   [ ] **对视频，尤其是长视频的支持理解**
+*   [ ] **模型本地化**: 应当考虑到模型的推理时延，除了采用 API 的方式，应当提供本地化部署的方案，这里拟采用 vllm 的方案进行拓展。同时对一些文本 LLM 采用 C++ 的方法重写结构并加载权重进行推理，有关 CLIP 则采用 TensorRT 进行加速。
+*   [ ] **本地化知识库的支持**: 对本地知识库中的数据召回和重排。
+*   [ ] **对agent的设计**：设计可以自主调度工具的agent，（TOOL-LLM）
+*   [ ] **对图像文本信息的细粒度构建**: 通过对时间、地点、人物、事件四大元素的关联。不过这个本质上有点像图RAG。
 
 ## 📅 更新日志 (Update Log)
 *   ** 毕业ing，更新时间随缘**
